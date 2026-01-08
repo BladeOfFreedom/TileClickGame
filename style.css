@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.rampart-one-regular {
+  font-family: "Rampart One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#gameScene{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+
+#top{
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    text-align: center;
+}
+
+#top div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#timer{
+    align-items: center;
+    margin-top: 40px;
+}
+
+#full{
+    width: 400px;
+    height: 10px;
+    background-color: blue;
+    
+}
+
+#remaining{
+    width: 200px;
+    height: 10px;
+    background-color: lightblue;
+    
+    transition: all 0.1s linear;
+}
+
+#comboLimit{
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    left: 200px;
+}
+
+#tiles{
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px;
+    height: 400px;
+    
+}
+
+.activeTile{
+    background-color: black;
+}
+
+.clickedTile{
+    background-color: lightgreen;
+}
+
+.tile{
+    display: flex;
+    width: 24%;
+    height: 25%;
+    border: 1px solid grey;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s ease;
+}
+
+.scoreText{
+    color: grey;
+    font-size: 64px;
+    pointer-events: none;
+}
+
+#comboBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 470px;
+    left: 420px;
+}
+
+
+.bounceAnimation{
+    animation: comboBounce 0.2s linear;  
+}
+
+@keyframes comboBounce {
+  /* 0% (Start state) */
+  from {
+    transform: scale(1);
+  }
+
+  /* Intermediate state (Optional) */
+  50% {
+    transform: scale(1.4) translate(50px); /* Make it bigger than normal */
+  }
+
+  /* 100% (End state) */
+  to {
+    transform: scale(1); /* Back to normal size */
+  }
+}
+
+
+@media (max-width: 768px) {
+    #comboBox{
+        display: none;
+    }
+}

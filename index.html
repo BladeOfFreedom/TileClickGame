@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body class="rampart-one-regular">    
+    <div id="gameScene">
+        <div id="top">
+            <div id="highScore">
+                <span>HIGH-SCORE</span>
+                <span style="font-size: 32px;">193</span>
+            </div>
+            <div id="score">
+                <span>SCORE</span>
+                <span style="font-size: 64px; color: lightgreen;">0</span>
+            </div>
+            <div id="time">
+                <span>TIME</span>
+                <span style="font-size: 32px; color: red;">10</span>
+            </div>
+
+        </div>
+
+        <div id="tiles"></div>
+
+        <div id="timer">
+            <div id="full">
+            <div id="remaining">
+            <div id="comboLimit">
+        </div>
+
+        <div id="comboBox">
+            <span style="font-size: 64px;">!Combo</span>
+            <span style="font-size: 32px;">0</span>
+        </div>
+
+    </div>
+
+    <script src="./game.js"></script>
+
+</body>
+</html>

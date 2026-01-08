@@ -1,0 +1,42 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Logs
+*.log
+
+# Environment
+.env
+
+# Build / cache
+dist/
+build/
+.cache/
+
+# Misc
+*.zip
+*.tar.gz
+*.bak
+
+# Ignore dependency directories often created by package managers
+.pnpm-debug.log
+
+# Optional: ignore OS-specific OneDrive placeholders
+*.ini

@@ -164,6 +164,9 @@ function gameLoop(){
                 //display correct things according to score
                 if(score > localHighScore){
                     localStorage.setItem("highScore", score)
+                    document.querySelector("#highScore span:last-of-type").textContent = score
+                    newHighScore.volume = 0.2
+                    newHighScore.play()
                 }
                 //this sound was really funny generally so i decided to keep it. It was really funny when we were trying to find an error and from the background comes this sound suddenly
                 else{

@@ -28,5 +28,5 @@ Notes & Troubleshooting
 - If the timer or bar appears to behave too fast or persists after game end, see `game.js` for interval handling. The project uses `setInterval` for the countdown and bar — both must be cleared when the game ends to avoid overlapping timers.
 
 Suggested next steps
-- Add an explicit game-over UI and a restart button, more info about the gameplay after end(cps etc.).
+- Add an explicit game-over UI and a restart button, more info about the gameplay after end(cps etc.). DONE :PPP
 - Customizable sounds and tiles.

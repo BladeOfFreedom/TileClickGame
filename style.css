@@ -109,6 +109,24 @@
     animation: comboBounce 0.2s linear;  
 }
 
+.endStats{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+    left: 10%;
+    background-color: grey;
+    border-radius: 10px;
+    padding: 50px;
+    gap: 20px;
+    justify-content: space-between;
+    
+}
+
+#endWindow{
+    display: inline;
+}
+
 @keyframes comboBounce {
   /* 0% (Start state) */
   from {
@@ -130,5 +148,11 @@
 @media (max-width: 768px) {
     #comboBox{
         display: none;
+    }
+
+    #endStats{
+        flex-direction: row;
+        bottom: 5;
+        left: 41%;
     }
 }

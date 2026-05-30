@@ -4,6 +4,9 @@ let localHighScore = localStorage.getItem("highScore")
 if(localHighScore === null)
     localHighScore = 0
 
+const endWindow = document.getElementById("endWindow")
+const endScore = document.getElementById("endScore")
+const endCPS = document.getElementById("endCPS")
 const gameFrame = document.getElementById("gameScene")
 //using set to handle duplicates
 const activeTiles = new Set()
@@ -111,7 +114,7 @@ function startGame(){
                 }, 100)
 
                 //play the right sound according to the current comboSound
-                comboSounds[curComboSound].volume = 0.1
+                comboSounds[curComboSound].volume = 0.05
                 comboSounds[curComboSound].currentTime = 0
                 comboSounds[curComboSound].play()
                 //make sure combo sound doesn't go outside of the size
@@ -161,6 +164,7 @@ function gameLoop(){
             else{
                 //end the game
                 gameStart = false
+                let cps = totalClicked / 10
                 //display correct things according to score
                 if(score > localHighScore){
                     localStorage.setItem("highScore", score)
@@ -172,9 +176,12 @@ function gameLoop(){
                 else{
                     fart.currentTime = 0
                     fart.volume = 0.2
-                    fart.play()
                 }
                 
+                endWindow.style.display = "inline-block"
+                endScore.textContent = `Last Score: ${score}`
+                endCPS.textContent = `Last CPS: ${cps}`
+
                 clearInterval(timerId)
                 if(typeof timerBar !== 'undefined'){
                     clearInterval(timerBar)
